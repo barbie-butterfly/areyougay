@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+
+    <style>
+        body {
+            background-color: #272727;
+            text-align: center;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+        }
+
+        .frame {
+            background: url(background.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 20px;
+            padding: 100px;
+            width: 450px;
+            height: 400px;
+            background-color: #fff;
+            margin: auto;
+            box-sizing: border-box;
+            margin-top: 100px;
+        }
+
+
+        #sim {
+            padding: 10px;
+            width: 60px;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            margin-left: -80px;
+            border-radius: 5px;
+            border: #fff;
+            background-image: url(noButton.png);
+            background-size: cover;
+            font-weight: 700;
+        }
+
+        #nao {
+            position: absolute;
+            padding: 10px;
+            width: 60px;
+            background-color: #191919;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            margin-left: 20px;
+            border-radius: 5px;
+            font-weight: 700;
+        }
+    </style>
+
+    <title>rs</title>
+</head>
+<body>
+    <div class="frame">
+        <h1>Oi vc e gay?</h1>
+        <h2>ps: seja sincero</h2>
+
+        <a href="https://www.youtube.com/watch?v=Kz2WjqV9Dc8"><button id="sim">Sim!</button></a>
+
+        <button id="nao" onmouseover="buttonEscape()">Não</button>
+    </div>
+
+    <script>
+
+        function onClickYes(){
+            alert('<3')
+        }
+
+        function buttonEscape(){
+            var button = document.getElementById('nao')
+
+            var maxWidth = (window.innerWidth - button.offsetWidth)
+            var maxHeight = (window.innerHeight  - button.offsetHeight)
+
+            var randomWidth = Math.floor(Math.random() * maxWidth)
+            var randomHeight = Math.floor(Math.random() * maxHeight)
+
+            button.style.left = randomWidth + 'px'
+            button.style.top = randomHeight + 'px'
+        }
+    </script>
+
+</body>
+</html>
